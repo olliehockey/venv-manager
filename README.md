@@ -5,17 +5,17 @@ A small command for creating, switching between and deleting Python virtual envi
 Works in **bash** and **zsh**, on **macOS** and **Linux**. It's a single shell file with no dependencies beyond Python's built-in `venv` module.
 
 ```
-$ venv create research 3.12
-Creating: research
+$ venv create main 3.12
+Creating: main
 Using: Python 3.12.4
 ...
-Created and activated: research
+Created and activated: main
 
 $ venv list
 Available virtual environments:
 
     main
-  * research             (active)
+  * main             (active)
 ```
 
 ## Install
@@ -23,7 +23,7 @@ Available virtual environments:
 One command, on macOS or Linux:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/OWNER/venv-manager/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/olliehockey/venv-manager/main/install.sh | bash
 ```
 
 Then open a new terminal and run `venv -h`.
@@ -44,7 +44,7 @@ It never touches your environments, and running it twice won't add anything twic
 **Prefer to clone?**
 
 ```bash
-git clone https://github.com/OWNER/venv-manager.git ~/.venv-manager
+git clone https://github.com/olliehockey/venv-manager.git ~/.venv-manager
 ~/.venv-manager/install.sh
 ```
 
@@ -66,15 +66,15 @@ This removes the lines it added and the `~/.venv-manager` folder. Your environme
 
 ## Usage
 
-| Command | Short | What it does |
-|---|---|---|
-| `venv list` | `venv -l` | List environments; the active one is marked `*` |
-| `venv create NAME [PY]` | `venv -c NAME [PY]` | Create and activate an environment |
-| `venv activate NAME` | `venv -a NAME` | Activate an environment |
-| `venv current` | `venv -s` | Show the active environment and Python version |
-| `venv deactivate` | `venv -x` | Leave the active environment |
-| `venv delete NAME` | `venv -d NAME` | Delete an environment, after confirmation |
-| `venv help` | `venv -h` | Show help |
+| Command                   | Short                 | What it does                                      |
+| ------------------------- | --------------------- | ------------------------------------------------- |
+| `venv list`             | `venv -l`           | List environments; the active one is marked `*` |
+| `venv create NAME [PY]` | `venv -c NAME [PY]` | Create and activate an environment                |
+| `venv activate NAME`    | `venv -a NAME`      | Activate an environment                           |
+| `venv current`          | `venv -s`           | Show the active environment and Python version    |
+| `venv deactivate`       | `venv -x`           | Leave the active environment                      |
+| `venv delete NAME`      | `venv -d NAME`      | Delete an environment, after confirmation         |
+| `venv help`             | `venv -h`           | Show help                                         |
 
 `venv <command> --help` shows help for a single command.
 
@@ -83,10 +83,10 @@ This removes the lines it added and the `~/.venv-manager` folder. Your environme
 `PY` can be a version number, a command name or a full path:
 
 ```bash
-venv create research            # uses python3
-venv create research 3.12       # uses python3.12
-venv create research python3.11
-venv create research /opt/homebrew/bin/python3.12
+venv create main            # uses python3
+venv create main 3.12       # uses python3.12
+venv create main python3.11
+venv create main /opt/homebrew/bin/python3.12
 ```
 
 ### Deleting safely
