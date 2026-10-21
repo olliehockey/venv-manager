@@ -3,7 +3,7 @@
 # venv-manager installer
 #
 # Install or update:
-#   curl -fsSL https://raw.githubusercontent.com/OWNER/venv-manager/main/install.sh | bash
+#   curl -fsSL https://raw.githubusercontent.com/olliehockey/venv-manager/main/install.sh | bash
 #   (or, from a clone:  ./install.sh)
 #
 # Uninstall:
@@ -14,7 +14,7 @@
 
 set -euo pipefail
 
-REPO="${VENV_MANAGER_REPO:-https://github.com/OWNER/venv-manager}"
+REPO="${VENV_MANAGER_REPO:-https://github.com/olliehockey/venv-manager}"
 BRANCH="${VENV_MANAGER_BRANCH:-main}"
 INSTALL_DIR="${VENV_MANAGER_DIR:-$HOME/.venv-manager}"
 MARK="# venv-manager"
