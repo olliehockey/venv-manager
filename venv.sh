@@ -69,10 +69,6 @@ Usage:
   venv --activate NAME
 
 Activates an existing Python virtual environment.
-
-Examples:
-  venv activate research
-  venv -a main
 EOF
             ;;
 
@@ -87,12 +83,6 @@ Creates and activates a new virtual environment.
 
 PYTHON may be a version, command or interpreter path.
 Without it, python3 is used.
-
-Examples:
-  venv create research
-  venv create research 3.12
-  venv -c research python3.11
-  venv --create research /opt/homebrew/bin/python3.12
 EOF
             ;;
 
